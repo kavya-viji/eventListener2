@@ -1,0 +1,31 @@
+<!doctype HTML>
+<html>
+<head>
+	<title>Event Handling</title>
+	<script>
+		window.onload=function()
+		{
+			var a = document.getElementById("k1");
+			a.addEventListener("click",callme);
+			a.addEventListener("mouseout",overme);
+			// a.removeEventListener("click",callme)
+			
+			function callme()
+			{
+				this.style.color="salmon";
+				alert("I am clicked")
+			}
+			
+			function overme()
+			{
+				this.style.color="violet";
+				alert("I am out")
+			}
+		}
+		</script>
+</head>
+<body>
+	
+	<h1 id="k1">Good Morning</h1>
+</body>
+</html>
